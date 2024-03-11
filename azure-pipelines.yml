@@ -37,9 +37,9 @@ stages:
         tags: |
           $(tag)
   
-    - script: |
-        docker save -o $(imageRepository).tar $(imageRepository):$(tag)
-      displayName: 'Save Docker image to tarball'
+    # - script: |
+    #     docker save -o $(imageRepository).tar $(imageRepository):$(tag)
+    #   displayName: 'Save Docker image to tarball'
 
     - script: |
         wget https://github.com/arminc/clair-scanner/releases/download/v12/clair-scanner_linux_amd64
